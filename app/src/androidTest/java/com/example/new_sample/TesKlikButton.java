@@ -87,7 +87,7 @@ public class TesKlikButton {
     @Test
     public void kali_simple(){
         onView(withId(R.id.button5)).perform(click());
-        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button_multi)).perform(click());
         onView(withId(R.id.button5)).perform(click());
         onView(withId(R.id.button_equal)).perform(click());
         onView(withId(R.id.output)).check(matches(withText("25")));
@@ -96,7 +96,7 @@ public class TesKlikButton {
     @Test
     public void bagi_simple(){
         onView(withId(R.id.button5)).perform(click());
-        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button_divide)).perform(click());
         onView(withId(R.id.button5)).perform(click());
         onView(withId(R.id.button_equal)).perform(click());
         onView(withId(R.id.output)).check(matches(withText("5")));
@@ -105,7 +105,7 @@ public class TesKlikButton {
     @Test
     public void modulus_simple(){
         onView(withId(R.id.button5)).perform(click());
-        onView(withId(R.id.button_divide)).perform(click());
+        onView(withId(R.id.button_para1)).perform(click());
         onView(withId(R.id.button5)).perform(click());
         onView(withId(R.id.button_equal)).perform(click());
         onView(withId(R.id.output)).check(matches(withText("5")));
