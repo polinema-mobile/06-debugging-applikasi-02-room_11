@@ -92,6 +92,7 @@ public class TesKlikButton {
         onView(withId(R.id.button_equal)).perform(click());
         onView(withId(R.id.output)).check(matches(withText("1")));
     }
+    @Test
     public void test_modulus(){
         onView(withId(R.id.button1)).perform(click());
         onView(withId(R.id.button_para1)).perform(click());
