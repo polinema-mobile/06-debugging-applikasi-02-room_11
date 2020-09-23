@@ -22,13 +22,6 @@ public class TesKlikButton {
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    public void tesKlikButtonSatu(){
-        //cari id button1 terus di klik
-        onView(withId(R.id.button1)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("1")));
-    }
-
-    @Test
     public void click_number_btn() {
         onView(withId(R.id.button1)).perform(click());
         onView(withId(R.id.button2)).perform(click());
