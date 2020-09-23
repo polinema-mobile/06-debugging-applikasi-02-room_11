@@ -60,7 +60,7 @@ public class TesKlikButton {
     }
 
     @Test
-    public void tambah_simple(){
+    public void test_penjumlahan(){
         onView(withId(R.id.button1)).perform(click());
         onView(withId(R.id.button_add)).perform(click());
         onView(withId(R.id.button1)).perform(click());
@@ -69,9 +69,32 @@ public class TesKlikButton {
     }
 
     @Test
-    public void kurang_simple(){
+    public void test_pengurangan(){
         onView(withId(R.id.button1)).perform(click());
         onView(withId(R.id.button_sub)).perform(click());
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("0")));
+    }
+    @Test
+    public void test_perkalian(){
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.button_multi)).perform(click());
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("2")));
+    }
+    @Test
+    public void test_pembagian(){
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.button_divide)).perform(click());
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("1")));
+    }
+    public void test_modulus(){
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.button_para1)).perform(click());
         onView(withId(R.id.button1)).perform(click());
         onView(withId(R.id.button_equal)).perform(click());
         onView(withId(R.id.output)).check(matches(withText("0")));
